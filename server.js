@@ -12,10 +12,8 @@ const image = require('./Control/image.js');
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
-      user : 'alfian',
-      password : 'nm',
-      database : 'zoune-io'
+      connectionString : process.env.DATABASE_URL,
+      rejectUnauthorized: false
     }
   });
 
